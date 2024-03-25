@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "fao-rag-llm"
+version = "0.1.0"
+description = "Sample code that uses data from FAO stats to build a RAG over LLM"
+authors = ["Jose Damico <jose.damico@scicrop.com>"]
+license = "Apache 2.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+chromadb = "^0.4.24"
+llama-index = "^0.10.20"
+llama-index-vector-stores-chroma = "^0.1.6"
+llama-index-llms-openai = "^0.1.12"
+llama-index-core = "^0.10.20"
+pandas = "^2.2.1"
+python-decouple = "^3.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
