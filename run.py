@@ -52,7 +52,7 @@ Please return the evaluation of the response in the following JSON format.
 """
 
 
-def line_wrap(text, max_len=100):
+def line_wrap(text, max_len=200):
     return "\n".join(text[i:i + max_len] for i in range(0, len(text), max_len))
 
 
@@ -152,7 +152,7 @@ class RetryAgentWorker(CustomSimpleAgentWorker):
             is_done = False
         state["new_input"] = response_eval.new_question
 
-        response = line_wrap(str(response))
+        #response = line_wrap(str(response))
 
         if self.verbose:
             print(f"- Question: {new_input}")
